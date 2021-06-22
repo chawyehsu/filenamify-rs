@@ -7,8 +7,8 @@ license = "MIT OR Apache-2.0"
 repository = "https://github.com/chawyehsu/filenamify-rs"
 edition = "2018"
 readme = "README.md"
-keywords = ["filename"]
 categories = ["text-processing"]
+keywords = ["filename", "normalize"]
 
 [dependencies]
 regex = "1.5"

@@ -1,5 +1,28 @@
+//! A tiny crate providing a function to convert a input string to a valid safe
+//! filename.
+//!
+//! ## Examples
+//!
+//! Convert a input string to a valid safe filename.
+//!
+//! ```
+//! use filenamify::filenamify;
+//! let safe_filename = filenamify("//foo/bar/file");
+//! println!("{}", safe_filename); // Prints "_foo_bar_file"
+//! ```
+//!
 use regex::Regex;
 
+/// Convert a input string to a valid safe filename.
+/// 
+/// ## Examples
+///
+/// ```
+/// use filenamify::filenamify;
+/// let safe_filename = filenamify("//foo/bar/file");
+/// println!("{}", safe_filename); // Prints "_foo_bar_file"
+/// ```
+///
 pub fn filenamify<S: AsRef<str>>(input: S) -> String {
     let replacemant = "_";
     let reserved = Regex::new("[<>:\"/\\\\|?*\u{0000}-\u{001F}\u{007F}\u{0080}-\u{009F}]+").unwrap();

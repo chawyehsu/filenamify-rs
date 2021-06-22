@@ -1,8 +1,11 @@
 # filenamify
 
+[![docs-svg]][docs-url]
 [![crates-svg]][crates-url]
 [![deps-svg]][deps-url]
 
+[docs-svg]: https://docs.rs/filenamify/badge.svg
+[docs-url]: https://docs.rs/filenamify
 [crates-svg]: https://img.shields.io/crates/v/filenamify.svg
 [crates-url]: https://crates.io/crates/filenamify
 [deps-svg]: https://deps.rs/repo/github/chawyehsu/filenamify-rs/status.svg
