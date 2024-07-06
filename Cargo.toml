@@ -1,6 +1,6 @@
 [package]
 name = "filenamify"
-version = "0.1.1"
+version = "0.1.0"
 authors = ["Chawye Hsu <chawyehsu@hotmail.com>"]
 description = "Convert a string to a valid safe filename."
 license = "MIT OR Apache-2.0"
@@ -11,4 +11,5 @@ categories = ["text-processing"]
 keywords = ["filename", "normalize"]
 
 [dependencies]
+lazy_static = "1.5.0"
 regex = "1.5"
