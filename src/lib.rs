@@ -8,28 +8,30 @@
 //! ```
 //! use filenamify::filenamify;
 //! let safe_filename = filenamify("//foo/bar/file");
-//! println!("{}", safe_filename); // Prints "_foo_bar_file"
+//! assert_eq!(safe_filename, "_foo_bar_file");
 //! ```
-//!
+
 use regex::Regex;
+
+use lazy_static::lazy_static;
+
+lazy_static! {
+    static ref RESERVED: Regex = Regex::new("[<>:\"/\\\\|?*\u{0000}-\u{001F}\u{007F}\u{0080}-\u{009F}]+").unwrap();
+
+}
 
 /// Convert a input string to a valid safe filename.
 /// 
-/// ## Examples
+/// See [`crate` level documentation] for an example
 ///
-/// ```
-/// use filenamify::filenamify;
-/// let safe_filename = filenamify("//foo/bar/file");
-/// println!("{}", safe_filename); // Prints "_foo_bar_file"
-/// ```
+/// [`crate` level documentation]: crate
 ///
 pub fn filenamify<S: AsRef<str>>(input: S) -> String {
     let replacemant = "_";
-    let reserved = Regex::new("[<>:\"/\\\\|?*\u{0000}-\u{001F}\u{007F}\u{0080}-\u{009F}]+").unwrap();
     let windows_reserved = Regex::new("^(con|prn|aux|nul|com\\d|lpt\\d)$").unwrap();
     let outer_periods = Regex::new("^\\.+|\\.+$").unwrap();
 
-    let input = reserved.replace_all(input.as_ref(), replacemant);
+    let input = RESERVED.replace_all(input.as_ref(), replacemant);
     let input = outer_periods.replace_all(input.as_ref(), replacemant);
 
     let mut result = input.into_owned();
