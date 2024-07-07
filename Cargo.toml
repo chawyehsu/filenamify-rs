@@ -1,8 +1,8 @@
 [package]
 name = "filenamify"
 version = "0.1.0"
-authors = ["Chawye Hsu <chawyehsu@hotmail.com>"]
-description = "Convert a string to a valid safe filename."
+authors = ["Chawye Hsu <su+cratesio@chawyehsu.com>"]
+description = "Convert a string to a valid filename"
 license = "MIT OR Apache-2.0"
 repository = "https://github.com/chawyehsu/filenamify-rs"
 edition = "2018"

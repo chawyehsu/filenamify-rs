@@ -11,7 +11,7 @@
 [deps-svg]: https://deps.rs/repo/github/chawyehsu/filenamify-rs/status.svg
 [deps-url]: https://deps.rs/repo/github/chawyehsu/filenamify-rs
 
-> Convert a string to a valid safe filename
+> Convert a string to a valid filename
 
 ## Install
 

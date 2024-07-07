@@ -1,9 +1,9 @@
-//! A tiny crate providing a function to convert a input string to a valid safe
+//! A tiny crate providing a function to convert a input string to a valid
 //! filename.
 //!
 //! ## Examples
 //!
-//! Convert a input string to a valid safe filename.
+//! Convert a input string to a valid filename.
 //!
 //! ```
 //! use filenamify::filenamify;
@@ -20,7 +20,7 @@ lazy_static! {
 
 }
 
-/// Convert a input string to a valid safe filename.
+/// Convert a input string to a valid filename.
 /// 
 /// See [`crate` level documentation] for an example
 ///
