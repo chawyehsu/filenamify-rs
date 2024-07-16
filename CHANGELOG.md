@@ -1,6 +1,6 @@
 # Changelog
 
-## [0.1.1](https://github.com/chawyehsu/hok/compare/v0.1.0...v0.1.1) (2024-07-16)
+## [0.1.1](https://github.com/chawyehsu/filenamify-rs/compare/v0.1.0...v0.1.1) (2024-07-16)
 
 
 ### Performance
