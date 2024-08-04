@@ -18,6 +18,8 @@ use lazy_static::lazy_static;
 lazy_static! {
     static ref RESERVED: Regex =
         Regex::new("[<>:\"/\\\\|?*\u{0000}-\u{001F}\u{007F}\u{0080}-\u{009F}]+").unwrap();
+    static ref WINDOWS_RESERVED: Regex = Regex::new("^(con|prn|aux|nul|com\\d|lpt\\d)$").unwrap();
+    static ref OUTER_PERIODS: Regex = Regex::new("^\\.+|\\.+$").unwrap();
 }
 
 /// Convert a input string to a valid filename.
@@ -28,14 +30,12 @@ lazy_static! {
 ///
 pub fn filenamify<S: AsRef<str>>(input: S) -> String {
     let replacemant = "_";
-    let windows_reserved = Regex::new("^(con|prn|aux|nul|com\\d|lpt\\d)$").unwrap();
-    let outer_periods = Regex::new("^\\.+|\\.+$").unwrap();
 
     let input = RESERVED.replace_all(input.as_ref(), replacemant);
-    let input = outer_periods.replace_all(input.as_ref(), replacemant);
+    let input = OUTER_PERIODS.replace_all(input.as_ref(), replacemant);
 
     let mut result = input.into_owned();
-    if windows_reserved.is_match(result.as_str()) {
+    if WINDOWS_RESERVED.is_match(result.as_str()) {
         result.push_str(replacemant);
     }
 
