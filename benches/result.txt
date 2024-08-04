@@ -1,4 +1,29 @@
 --------
+ v0.1.2
+--------
+     Running benches/main.rs (target\release\deps\bench-1faadb3a747d1cd0.exe)
+Gnuplot not found, using plotters backend
+filenamify              time:   [355.63 ns 366.18 ns 379.17 ns]
+                        change: [-99.806% -99.795% -99.784%] (p = 0.00 < 0.05)
+                        Performance has improved.
+Found 16 outliers among 100 measurements (16.00%)
+  6 (6.00%) high mild
+  10 (10.00%) high severe
+
+filenamify #2           time:   [412.05 ns 430.76 ns 452.02 ns]
+                        change: [-99.824% -99.817% -99.808%] (p = 0.00 < 0.05)
+                        Performance has improved.
+Found 17 outliers among 100 measurements (17.00%)
+  4 (4.00%) high mild
+  13 (13.00%) high severe
+
+filenamify #3           time:   [818.84 ns 874.02 ns 924.52 ns]
+                        change: [-99.633% -99.611% -99.589%] (p = 0.00 < 0.05)
+                        Performance has improved.
+Found 4 outliers among 100 measurements (4.00%)
+  4 (4.00%) high mild
+
+--------
  v0.1.1
 --------
      Running benches/main.rs (target\release\deps\bench-1faadb3a747d1cd0.exe)
