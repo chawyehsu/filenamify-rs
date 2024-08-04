@@ -1,0 +1,45 @@
+--------
+ v0.1.1
+--------
+     Running benches/main.rs (target\release\deps\bench-1faadb3a747d1cd0.exe)
+Gnuplot not found, using plotters backend
+filenamify              time:   [192.35 µs 199.92 µs 207.81 µs]
+                        change: [-33.318% -30.612% -27.635%] (p = 0.00 < 0.05)
+                        Performance has improved.
+Found 14 outliers among 100 measurements (14.00%)
+  11 (11.00%) high mild
+  3 (3.00%) high severe
+
+filenamify #2           time:   [219.96 µs 226.52 µs 234.05 µs]
+                        change: [-23.609% -20.479% -17.247%] (p = 0.00 < 0.05)
+                        Performance has improved.
+Found 11 outliers among 100 measurements (11.00%)
+  6 (6.00%) high mild
+  5 (5.00%) high severe
+
+filenamify #3           time:   [186.96 µs 195.36 µs 206.23 µs]
+                        change: [-36.995% -33.504% -29.664%] (p = 0.00 < 0.05)
+                        Performance has improved.
+Found 11 outliers among 100 measurements (11.00%)
+  6 (6.00%) high mild
+  5 (5.00%) high severe
+
+--------
+ v0.1.0
+--------
+     Running benches/main.rs (target\release\deps\bench-1faadb3a747d1cd0.exe)
+Gnuplot not found, using plotters backend
+filenamify              time:   [279.94 µs 293.42 µs 308.32 µs]
+Found 9 outliers among 100 measurements (9.00%)
+  6 (6.00%) high mild
+  3 (3.00%) high severe
+
+filenamify #2           time:   [277.41 µs 283.87 µs 291.27 µs]
+Found 10 outliers among 100 measurements (10.00%)
+  2 (2.00%) high mild
+  8 (8.00%) high severe
+
+filenamify #3           time:   [281.71 µs 292.78 µs 305.20 µs]
+Found 19 outliers among 100 measurements (19.00%)
+  15 (15.00%) high mild
+  4 (4.00%) high severe
